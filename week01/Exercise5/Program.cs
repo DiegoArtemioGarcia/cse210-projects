@@ -7,7 +7,7 @@ class Program
         Message();
 
         string nombre = PromptNombreUsusario();
-        int numero = PromptNumero();
+        int numero = PromptNumer();
 
         int squaredNumber = SquareNumber(numero);
 
@@ -27,7 +27,7 @@ class Program
         return name;
     }
 
-    static int PromptNumero()
+    static int PromptNumer()
     {
         Console.Write("Please enter your favorite number: ");
         int number = int.Parse(Console.ReadLine());
