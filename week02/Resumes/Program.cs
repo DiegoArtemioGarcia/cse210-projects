@@ -20,8 +20,8 @@ class Program
         job2._endYear = 2020;
 
         //create a resume (resume), assign a name to the person, and add the jobs to their list of employments.
-        Resume myResume = new Resume();
-        myResume._name = "Diego Garcia";
+        Resume myResume = new Resume();// create a new resume object
+        myResume._name = "Diego Garcia";// assign a name to the person
         
         myResume._jobs.Add(job1);
         myResume._jobs.Add(job2);
