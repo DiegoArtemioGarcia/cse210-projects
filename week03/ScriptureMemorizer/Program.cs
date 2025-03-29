@@ -6,7 +6,7 @@ class Program
 {
     static void Main()
     {
-        string filePath = "/Users/diegogarcia/Desktop/BYU/3trim/cse210/cse210-projects-4/week03/ScriptureMemorizer/escrituras.txt";
+        string filePath = "escrituras.txt";
 
         List<Scripture> scriptures = LoadScripturesFromFile(filePath);
 
