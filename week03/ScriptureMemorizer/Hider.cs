@@ -2,7 +2,7 @@ using System;
 
 class Hider
 {
-    // Este método se puede usar para ocultar un número específico de palabras
+    // Este método oculta un número específico de palabras aleatoriamente
     public static void HideRandomWords(Scripture scripture, int count)
     {
         scripture.HideRandomWords(count);

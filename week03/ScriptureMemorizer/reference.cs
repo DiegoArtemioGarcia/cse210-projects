@@ -7,16 +7,14 @@ class Reference
     private int verseStart;
     private int verseEnd;
 
-    // Constructor para un solo versículo
     public Reference(string book, int chapter, int verse)
     {
         this.book = book;
         this.chapter = chapter;
         this.verseStart = verse;
-        this.verseEnd = verse; // Un solo versículo
+        this.verseEnd = verse;
     }
 
-    // Constructor para un rango de versículos
     public Reference(string book, int chapter, int verseStart, int verseEnd)
     {
         this.book = book;
@@ -25,16 +23,8 @@ class Reference
         this.verseEnd = verseEnd;
     }
 
-    // Método para devolver la referencia formateada
     public string GetDisplayText()
     {
-        if (verseStart == verseEnd)
-        {
-            return $"{book} {chapter}:{verseStart}";
-        }
-        else
-        {
-            return $"{book} {chapter}:{verseStart}-{verseEnd}";
-        }
+        return verseStart == verseEnd ? $"{book} {chapter}:{verseStart}" : $"{book} {chapter}:{verseStart}-{verseEnd}";
     }
 }

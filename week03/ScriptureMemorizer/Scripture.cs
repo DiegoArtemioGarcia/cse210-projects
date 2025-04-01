@@ -10,8 +10,6 @@ class Scripture
     {
         this.reference = reference;
         words = new List<Word>();
-
-        // Dividir el texto en palabras y guardarlas en la lista
         string[] wordArray = text.Split(' ');
         foreach (string w in wordArray)
         {
@@ -21,8 +19,8 @@ class Scripture
 
     public void Display()
     {
-        Console.Clear();  // Limpiar la pantalla cada vez que se muestra la escritura
-        Console.WriteLine(reference.GetDisplayText()); // Muestra la referencia
+        Console.Clear();
+        Console.WriteLine(reference.GetDisplayText());
 
         foreach (Word word in words)
         {
@@ -31,24 +29,20 @@ class Scripture
         Console.WriteLine("\n");
     }
 
-    // Ocultar palabras aleatorias
     public void HideRandomWords(int count)
     {
         Random rnd = new Random();
         for (int i = 0; i < count; i++)
         {
-            // Elegir una palabra aleatoria para ocultar, solo si no está oculta
             int index = rnd.Next(words.Count);
-            while (words[index].IsHidden())  // Asegurarse de que la palabra no esté oculta
+            while (words[index].IsHidden())
             {
                 index = rnd.Next(words.Count);
             }
-
             words[index].Hide();
         }
     }
 
-    // Verificar si todas las palabras están ocultas
     public bool AreAllWordsHidden()
     {
         foreach (Word word in words)

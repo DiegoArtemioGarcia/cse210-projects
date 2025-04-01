@@ -19,7 +19,7 @@ class Word
         return isHidden ? new string('_', text.Length) : text;
     }
 
-    public bool IsHidden()  // Método para verificar si la palabra está oculta
+    public bool IsHidden()
     {
         return isHidden;
     }
