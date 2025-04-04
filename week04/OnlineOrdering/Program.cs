@@ -31,7 +31,7 @@ class Program
         Console.WriteLine(order.GetShippingLabel());
 
         // Crear un segundo cliente con dirección fuera de EE.UU.
-        Address address2 = new Address("Calle Falsa", "Madrid", "Madrid", "Spain");
+        Address address2 = new Address("Calle Gran Vía, 46", "Centro", "Madrid", "Spain");
 
         Customer customer2 = new Customer("Juan Pérez", address2);
         // Crear un segundo pedido, asignando el cliente y la lista de productos.
