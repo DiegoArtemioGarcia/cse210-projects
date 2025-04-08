@@ -45,8 +45,5 @@ class Program
         // Mostrar la etiqueta de envío del segundo pedido.
         Console.WriteLine("\nShipping Label:");
         Console.WriteLine(order2.GetShippingLabel());
-
-
-
     }
 }
