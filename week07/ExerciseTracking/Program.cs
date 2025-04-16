@@ -1,9 +1,29 @@
 using System;
-
-class Program
+using System.Collections.Generic;
+using GymActivities.Models;
+namespace GymActivities
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello World! This is the ExerciseTracking Project.");
+        static void Main()
+        {
+            try
+            {
+                var activities = new List<Activity>
+                {
+                    new Running("03 Nov 2022", 30, 4.8),
+                    new Cycling("03 Nov 2022", 30, 9.7),
+                    new Swimming("03 Nov 2022", 30, 20)
+                };
+                foreach (var activity in activities)
+                {
+                    Console.WriteLine(activity.GetSummary());
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
     }
 }
